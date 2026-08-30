@@ -9,19 +9,19 @@ type UseActionOptionProps = {
     onError?: (_onArgs: OnArgs) => void;
 }
 
-const useActionFeedback = (actionState: ActionState, options: UseActionOptionProps) => {
-    const previousTimestamp = useRef(actionState.timestamp);
+const useActionFeedback = (
+    actionState: ActionState,
+    options: UseActionOptionProps
+) => {
     useEffect(() => {
-        const isUpdate = actionState.timestamp - previousTimestamp.current;
-        if (!isUpdate) return;
         if (actionState.status === "SUCCESS") {
             options.onSuccess?.({ actionState });
         }
+
         if (actionState.status === "ERROR") {
             options.onError?.({ actionState });
         }
-        previousTimestamp.current = actionState.timestamp;
-    }, [actionState, options])
-}
+    }, [actionState.timestamp]);
+};
 
 export { useActionFeedback }

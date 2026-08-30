@@ -13,6 +13,7 @@ type FormProps<T = unknown> = {
 const Form = ({ action, children, actionState, onSuccess, onError }: FormProps) => {
     useActionFeedback(actionState, {
         onSuccess: ({ actionState }) => {
+            console.log("success", actionState)
             if (actionState.message) {
                 toast.success(actionState.message);
             }

@@ -1,7 +1,11 @@
 "use server"
 
 import { ActionState, fromErrorToActionState, toActionState } from "@/components/form/utils/to-action-state";
+import { mailerSend } from "@/lib/mailersend";
+import { Sender, Recipient, EmailParams } from "mailersend";
 import * as z from "zod";
+import { sendContactEmail } from "../emails/sendContactEmail";
+import { contactReplyEmail } from "../emails/contactReplyEmail";
 
 const sendMessageSchema = z.object({
     name: z.string().min(1, "Is required").max(50, "Name should be less that 50 chars"),
@@ -12,10 +16,13 @@ const sendMessageSchema = z.object({
 export async function sendMesasge(_actionState: ActionState, formData: FormData) {
     try {
         const { name, email, message } = sendMessageSchema.parse(Object.fromEntries(formData));
-        console.log(name, email, message);
+
+        await sendContactEmail(name, email, message);
+        await contactReplyEmail(name, email);
+
 
     } catch (error) {
         return fromErrorToActionState(error, formData);
     }
-    return toActionState("SUCCESS", "Message send successfully!")
+    return toActionState("SUCCESS", "Message send successfully!", formData)
 }
