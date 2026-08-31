@@ -27,7 +27,6 @@ const ContactReplyEmail = ({
 
             <Body
                 style={{
-                    backgroundColor: "#121212",
                     fontFamily:
                         "Arial, Helvetica, sans-serif",
                     margin: 0,
