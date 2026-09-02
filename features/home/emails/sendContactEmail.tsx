@@ -1,4 +1,4 @@
-import { email, email as ownerEmail } from "@/assets/const";
+import { userEmail, userEmail as ownerEmail } from "@/assets/const";
 import ContactMessageEmail from "@/emails/contact/ContactMessageEmail";
 import { mailerSend } from "@/lib/mailersend";
 import { render } from "@react-email/components";

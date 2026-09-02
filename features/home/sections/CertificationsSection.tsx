@@ -1,6 +1,6 @@
 import { certifications } from '@/assets/data';
 
-import { LinkList } from './shared';
+import { LinkList } from '../../../components/LinkList';
 import { SectionHeading } from '@/components/SectionHeading';
 
 export function CertificationsSection() {

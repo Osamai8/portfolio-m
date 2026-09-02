@@ -1,8 +1,8 @@
-import { ArrowDownToLine } from 'lucide-react';
+import { LucideArrowDownToLine, LucideMapPin } from 'lucide-react';
 import Image from 'next/image';
 import { profileImage } from '@/assets/images';
-import { CopyEmail } from './shared';
 import { LINKS } from '@/assets/const';
+import { HeroFooter } from './HeroFooter';
 
 const HeroSection = () => {
     return (
@@ -24,16 +24,11 @@ const HeroSection = () => {
                         </h1>
                         <p className="my-1.25 mb-1.75 text-lg leading-[1.1] text-[#a0a0a0] max-[620px]:text-[17px]">Fullstack Developer</p>
                         <p className="my-1.5 flex items-center gap-1 text-sm text-[#9b9b9b]">
-                            <span className="flex items-center">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="h-3.5 w-3.5">
-                                    <path d="M12 21s6-5.7 6-11a6 6 0 1 0-12 0c0 5.3 6 11 6 11Z" />
-                                    <circle cx="12" cy="10" r="2.5" />
-                                </svg>
-                            </span>
+                            <LucideMapPin className='h-4 w-4' />
                             Bareilly, UP, IN
                         </p>
                         <p className="mt-5.5 flex items-center gap-1.5 text-sm text-[#9b9b9b]">
-                            <span className="h-1.75 w-1.75 rounded-full bg-[#27e660] shadow-[0_0_0_3px_rgba(39,230,96,0.06)]" />
+                            <span className="h-1.75 w-1.75 rounded-full bg-primary animate-pulse" />
                             Available for work
                         </p>
                     </div>
@@ -45,21 +40,11 @@ const HeroSection = () => {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <ArrowDownToLine size={16} strokeWidth={1.2} /> Download CV
+                        <LucideArrowDownToLine size={16} strokeWidth={1.2} /> Download CV
                     </a>
                 </div>
             </div>
-            <div className="flex items-center justify-between border-t border-[#303030] pt-3.25 max-[620px]:flex-col max-[620px]:items-start max-[620px]:gap-3.5">
-                <CopyEmail />
-                <div className="flex items-center gap-5.25">
-                    <a className="inline-flex items-center gap-1.5 text-base text-[#9c9c9c] transition-colors duration-200 hover:text-white" href={LINKS.github}>
-                        Github
-                    </a>
-                    <a className="inline-flex items-center gap-1.5 text-base text-[#9c9c9c] transition-colors duration-200 hover:text-white" href={LINKS.linkedin}>
-                        LinkedIn
-                    </a>
-                </div>
-            </div>
+            <HeroFooter />
         </section>
     );
 }

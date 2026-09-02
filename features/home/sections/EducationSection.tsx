@@ -1,6 +1,6 @@
 import { education } from '@/assets/data';
 
-import { Timeline } from '../../../components/Timeline';
+import { Timeline } from '@/components/Timeline';
 import { SectionHeading } from '@/components/SectionHeading';
 
 export function EducationSection() {

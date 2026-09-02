@@ -2,11 +2,10 @@ export { AboutSection } from './AboutSection';
 
 export { AwardsSection } from './AwardsSection';
 export { CertificationsSection } from './CertificationsSection';
-export { ContactSection } from './ContactSection';
+export { ContactSection } from './contact/ContactSection';
 export { EducationSection } from './EducationSection';
 export { ExperienceSection } from './ExperienceSection';
-export { FooterSection } from './FooterSection';
-export { HeroSection } from './HeroSection';
-export { ProjectsSection } from './ProjectsSection';
+export { HeroSection } from './hero/HeroSection';
+export { ProjectsSection } from './project/ProjectsSection';
 export { RecommendationsSection } from './RecommendationsSection';
-export { StackSection } from './StackSection';
+export { StackSection } from './stack/StackSection';

@@ -6,9 +6,8 @@ import { Input } from '@/components/ui/input';
 import { FieldError } from '@/components/form/FieldError';
 import { Textarea } from '@/components/ui/textarea';
 import { sendMesasge } from '@/features/home/actions/sendMessage';
-import { SubmitButton } from './form/SubmitButton';
-import { EMPTY_ACTION_STATE } from './form/utils/to-action-state';
-import { toast } from 'sonner';
+import { SubmitButton } from '@/components/form/SubmitButton';
+import { EMPTY_ACTION_STATE } from '@/components/form/utils/to-action-state';
 
 export default function ContactForm() {
   const [actionState, action] = useActionState(sendMesasge, EMPTY_ACTION_STATE);

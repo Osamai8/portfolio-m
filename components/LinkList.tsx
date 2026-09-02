@@ -1,36 +1,7 @@
-"use client";
 
-import { useState } from 'react';
-import { ArrowUpRight, Check, Copy } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 import { certifications } from '@/assets/data';
-import { email } from '@/assets/const';
-
-export function CopyEmail() {
-    const [copied, setCopied] = useState(false);
-
-    async function copyEmail() {
-        try {
-            await navigator.clipboard.writeText(email);
-            setCopied(true);
-            window.setTimeout(() => setCopied(false), 1700);
-        } catch {
-            setCopied(false);
-        }
-    }
-
-    return (
-        <button
-            className="inline-flex cursor-pointer items-center gap-2 border-0 bg-transparent p-0 text-base text-[#9c9c9c] transition-colors duration-200 hover:text-white"
-            type="button"
-            onClick={copyEmail}
-            aria-label="Copy email address"
-        >
-            {copied ? <Check size={16} strokeWidth={1.3} /> : <Copy size={16} strokeWidth={1.3} />}
-            <span>{copied ? 'Copied!' : email}</span>
-        </button>
-    );
-}
 
 export function LinkList({ entries }: { entries: typeof certifications }) {
     return (

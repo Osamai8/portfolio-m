@@ -201,6 +201,9 @@
     outline: 1px solid #f6f6f6;
     outline-offset: 4px;
   }
+  .main {
+    @apply mx-auto w-[min(760px,calc(100%-40px))] max-[840px]:w-[min(700px,calc(100%-36px))] max-[620px]:w-[min(100%-32px,520px)];
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -214,4 +217,11 @@
     animation-duration: 1ms !important;
     transition-duration: 1ms !important;
   }
+}
+
+.skills-directory__heading,
+.skills-directory__row {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }

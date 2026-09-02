@@ -5,5 +5,5 @@ export const LINKS = {
     resume: "",
     templateOwner: "https://thaer.shop"
 }
-export const email = "islamosama488@gmail.com";
+export const userEmail = "islamosama488@gmail.com";
 export const phoneNumber = "+91-8194054335";

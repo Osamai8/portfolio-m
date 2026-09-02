@@ -1,52 +1,14 @@
 // Ground-truth portfolio content from the supplied Framer body; keep data separate from presentation.
 
-import type { StaticImageData } from "next/image";
-import { project1Image, project2Image, project3Image } from "./images";
+import { TimelineEntry, ListEntry, StackItem, SkillGroup } from "./type";
 
-export type Project = {
-  title: string;
-  category: string;
-  image: StaticImageData | string;
-  href: string;
-};
 
-export type TimelineEntry = {
-  location: string;
-  title: string;
-  subtitle: string;
-  dates: string;
-  body: string[];
-};
-
-export type ListEntry = {
-  title: string;
-  meta: string;
-  action: string;
-  href: string;
-};
-
-export type StackItem = {
-  title: string;
-  description: string;
-  tone: string;
-  glyph: string;
-};
-
-export type Article = {
-  title: string;
-  source: string;
-  date: string;
-  summary: string;
-  image: string;
-  href: string;
-};
-
-export const projects: Project[] = [
-  { title: 'Brandify', category: 'Agency Website', image: project1Image, href: '#contact' },
-  { title: 'Shiro', category: 'Personal Portfolio', image: project2Image, href: '#contact' },
-  { title: 'Vivid', category: 'App Showcase', image: project3Image, href: '#contact' },
-  { title: 'Capture', category: 'Video Agency', image: project1Image, href: '#contact' },
-];
+// export const projects: Project[] = [
+//   { title: 'Brandify', category: 'Agency Website', image: project1Image, href: '#contact' },
+//   { title: 'Shiro', category: 'Personal Portfolio', image: project2Image, href: '#contact' },
+//   { title: 'Vivid', category: 'App Showcase', image: project3Image, href: '#contact' },
+//   { title: 'Capture', category: 'Video Agency', image: project1Image, href: '#contact' },
+// ];
 
 export const experience: TimelineEntry[] = [
   {
@@ -121,4 +83,77 @@ export const recommendations = [
   { name: 'Michael Brown', role: 'Founder of Creative Solutions Studio', quote: "Sam is an exceptional web designer with a keen eye for detail and a deep understanding of user experience. His designs are not only visually stunning but also highly functional, making him an invaluable asset to any team." },
   { name: 'Lisa Turner', role: 'Senior Developer at TechWave LLC', quote: "Working with Sam was a pleasure. His collaborative spirit and technical skills made our projects run smoothly and efficiently. Sam's designs always struck the perfect balance between aesthetics and usability." },
 ];
+
+export const skills: SkillGroup[] = [
+  {
+    category: 'Frontend',
+    tone: 'blue',
+    skills: [
+      { name: 'React.js', emphasized: true },
+      { name: 'Next.js', emphasized: true },
+      { name: 'Angular.js' },
+      { name: 'Redux' },
+      { name: 'Zustand' },
+      { name: 'TanStack Query' },
+      { name: 'Plotly.js' },
+      { name: 'Context API' },
+      { name: 'ShadCN' },
+    ],
+  },
+  {
+    category: 'Languages',
+    tone: 'amber',
+    skills: [
+      { name: 'TypeScript', emphasized: true },
+      { name: 'JavaScript' },
+      { name: 'HTML5' },
+      { name: 'CSS3' },
+    ],
+  },
+  {
+    category: 'Backend',
+    tone: 'green',
+    skills: [
+      { name: 'Node.js', emphasized: true },
+      { name: 'Express.js' },
+      { name: 'GraphQL' },
+      { name: 'REST APIs' },
+      { name: 'MongoDB' },
+      { name: 'Socket.io' },
+      { name: 'OAuth' },
+      { name: 'JWT' },
+    ],
+  },
+  {
+    category: 'Cloud',
+    tone: 'coral',
+    skills: [{ name: 'AWS S3' }, { name: 'Docker' }, { name: 'CI/CD' }],
+  },
+  {
+    category: 'Styling',
+    tone: 'purple',
+    skills: [
+      { name: 'Tailwind CSS', emphasized: true },
+      { name: 'Ant Design' },
+      { name: 'MUI' },
+      { name: 'Sass' },
+    ],
+  },
+  {
+    category: 'Tools',
+    tone: 'teal',
+    skills: [
+      { name: 'Vite' },
+      { name: 'Webpack' },
+      { name: 'Git' },
+      { name: 'Jest' },
+      { name: 'React Testing Library' },
+      { name: 'Sentry' },
+      { name: 'Web Analytics' },
+    ],
+  },
+];
+
+
+
 

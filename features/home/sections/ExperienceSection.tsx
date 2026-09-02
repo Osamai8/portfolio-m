@@ -1,6 +1,6 @@
 import { experience } from '@/assets/data';
 
-import { Timeline } from '../../../components/Timeline';
+import { Timeline } from '@/components/Timeline';
 import { SectionHeading } from '@/components/SectionHeading';
 
 const ExperienceSection = () => {

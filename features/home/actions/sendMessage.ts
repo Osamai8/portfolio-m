@@ -19,10 +19,8 @@ export async function sendMesasge(_actionState: ActionState, formData: FormData)
 
         await sendContactEmail(name, email, message);
         await contactReplyEmail(name, email);
-
-
     } catch (error) {
         return fromErrorToActionState(error, formData);
     }
-    return toActionState("SUCCESS", "Message send successfully!", formData)
+    return toActionState("SUCCESS", "Message send successfully!");
 }
