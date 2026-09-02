@@ -34,6 +34,7 @@ export type ProjectDetail = {
     problem: string;
     deliverables: string[];
     tech: string[];
-    images?: string[]
+    images?: string[];
+    link?: string;
 };
 

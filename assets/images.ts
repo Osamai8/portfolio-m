@@ -1,12 +1,16 @@
 import profileImage from "../assets/images/osama_profile.png";
-import project1Image from "../assets/images/article-1-and-capture.jpg";
-import project2Image from "../assets/images/article-1-and-capture.jpg";
-import project3Image from "../assets/images/article-1-and-capture.jpg";
-import project4Image from "../assets/images/article-1-and-capture.jpg";
-import inkImage from "../assets/images/article-1-and-capture.jpg";
+import ticketBountyMainImage from "../assets/images/tb-main.png";
+import dataSightMainImage from "../assets/images/data-sights-main.png";
+import afeLogo from "../assets/images/afe-logo.png";
+import mrcPortalLogo from "../assets/images/mrc-portal.png";
+import inkImage from "../assets/images/tb-main.png";
 
 export {
-    profileImage, project1Image, project2Image, project3Image,
-    project4Image, inkImage
+    profileImage,
+    ticketBountyMainImage,
+    dataSightMainImage,
+    afeLogo,
+    mrcPortalLogo,
+    inkImage
 };
 

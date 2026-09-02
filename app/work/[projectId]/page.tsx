@@ -20,7 +20,7 @@ const ProjectPage = async ({ params }: ProjectPageParams) => {
 
     return (
         <main className="main py-32">
-            <div className="w-full max-w-160">
+            <div className="w-full">
                 <Link
                     href="/#work"
                     className="mb-10 inline-block font-ui-mono text-[11px] uppercase tracking-[0.14em] text-[#6b6b67] transition-colors hover:text-[#f2f2ee]"

@@ -1,19 +1,20 @@
-import afe from "@/assets/images/article-2.jpg";
+import afe from "@/assets/images/tb-main.png";
 import { PortfolioProject, FeaturedProject, ProjectDetail } from "@/assets/project/type";
+import { afeLogo, dataSightMainImage, mrcPortalLogo, ticketBountyMainImage } from "../images";
 
 export const projects: PortfolioProject[] = [
     {
         id: "ticket-bounty",
         title: 'Ticket Bounty',
         subtitle: 'Full-stack SaaS ticketing platform',
-        image: afe,
+        image: ticketBountyMainImage,
         confidential: false
     },
     {
         id: "data-sights",
         title: 'ISDM DataSights',
         subtitle: 'SDG data visualization platform',
-        image: afe,
+        image: dataSightMainImage,
         confidential: false,
     },
     {
@@ -21,7 +22,7 @@ export const projects: PortfolioProject[] = [
         title: 'Amazon Future Engineer - Class Chat',
         subtitle: 'Real-time learning portal',
         confidential: true,
-        image: afe,
+        image: afeLogo,
         stats: [
             { value: '~40%', label: 'faster feature rollout' },
             { value: '1000s', label: 'students & educators reached' },
@@ -32,7 +33,7 @@ export const projects: PortfolioProject[] = [
         title: 'Jan Sahas MRC Portal',
         subtitle: 'Social protection platform',
         confidential: true,
-        image: afe,
+        image: mrcPortalLogo,
         stats: [
             { value: '3', label: 'role-based portal types' },
             { value: 'multi', label: 'tenant portal architecture' },

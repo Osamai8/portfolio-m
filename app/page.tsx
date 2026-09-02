@@ -26,7 +26,6 @@ export default function Home() {
         <StackSection />
         <ContactSection />
       </main>
-      <Footer />
     </div>
   );
 }

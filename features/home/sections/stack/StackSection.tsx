@@ -72,7 +72,7 @@ const StackSection = () => {
     }, []);
 
     return (
-        <div className="text-[#f2f2ee]" ref={sectionRef}>
+        <div className="text-[#f2f2ee] pt-23 scroll-mt-24 max-[620px]:pt-19" ref={sectionRef} id="stack">
             <div
                 className="mb-5 translate-y-0 opacity-100 transition-[opacity,transform] duration-520 ease-out motion-reduce:transform-none motion-reduce:transition-none"
                 data-skill-reveal
