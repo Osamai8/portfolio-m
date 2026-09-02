@@ -1,8 +1,8 @@
-import { LucideArrowDownToLine, LucideMapPin } from 'lucide-react';
-import Image from 'next/image';
-import { profileImage } from '@/assets/images';
-import { LINKS } from '@/assets/const';
-import { HeroFooter } from './HeroFooter';
+import { LucideArrowDownToLine, LucideMapPin } from "lucide-react";
+import Image from "next/image";
+import { LINKS } from "@/assets/const";
+import { profileImage } from "@/assets/images";
+import { HeroFooter } from "./HeroFooter";
 
 const HeroSection = () => {
     return (
@@ -22,12 +22,14 @@ const HeroSection = () => {
                         <h1 className="m-0 mt-0.5 text-[29px] font-semibold leading-[1.08] tracking-[-0.045em] max-[620px]:text-[26px]">
                             Osama Islam
                         </h1>
-                        <p className="my-1.25 mb-1.75 text-lg leading-[1.1] text-[#a0a0a0] max-[620px]:text-[17px]">Fullstack Developer</p>
+                        <p className="my-1.25 mb-1.75 text-lg leading-[1.1] text-[#a0a0a0] max-[620px]:text-[17px]">
+                            Fullstack Developer
+                        </p>
                         <p className="my-1.5 flex items-center gap-1 text-sm text-[#9b9b9b]">
-                            <LucideMapPin className='h-4 w-4' />
+                            <LucideMapPin className="h-4 w-4" />
                             Bareilly, UP, IN
                         </p>
-                        <p className="mt-5.5 flex items-center gap-1.5 text-sm text-[#9b9b9b]">
+                        <p className="mt-5.5 flex items-center gap-1.5 font-ui-mono text-[11px] uppercase tracking-[0.12em] text-[#9b9b9b]">
                             <span className="h-1.75 w-1.75 rounded-full bg-primary animate-pulse" />
                             Available for work
                         </p>
@@ -47,6 +49,6 @@ const HeroSection = () => {
             <HeroFooter />
         </section>
     );
-}
+};
 
-export { HeroSection }
+export { HeroSection };

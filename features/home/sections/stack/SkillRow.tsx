@@ -1,4 +1,4 @@
-import { SkillGroup } from '@/assets/data'
+import { SkillGroup } from "@/assets/type";
 
 const toneClasses = {
     amber: "bg-[#a18b5b]",
@@ -22,7 +22,7 @@ const SkillRow = ({ group, index }: SkillRowProps) => {
             key={group.category}
             style={{ transitionDelay: `${(index + 1) * 50}ms` }}
         >
-            <div className="flex items-center gap-2 font-mono text-[13px] leading-normal text-[#b8b8b3]">
+            <div className="flex items-center gap-2 font-ui-mono text-[12px] uppercase tracking-[0.12em] leading-normal text-[#b8b8b3]">
                 <span
                     className={`h-1.5 w-1.5 shrink-0 rounded-full ${toneClasses[group.tone]}`}
                     aria-hidden="true"
@@ -46,7 +46,7 @@ const SkillRow = ({ group, index }: SkillRowProps) => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export { SkillRow }
+export { SkillRow };
